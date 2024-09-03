@@ -11,7 +11,7 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize)
 {
 	int	i;
 	int	j;
-  int T;
+	int T;
 	int	*arr;
 
 	*returnSize = 2;
@@ -19,7 +19,7 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize)
 	if (!arr)
 		return (NULL);
 	i = 0;
-  T = 0;
+	T = 0;
 	while (i < numsSize)
 	{
 		j = i;
@@ -29,12 +29,12 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize)
 			{
 				arr[0] = i;
 				arr[1] = j;
-        T = 1;
+				T = 1;
 			}
 			j++;
 		}
-    if (T)
-      break;
+		if (T)
+			break;
 		i++;
 	}
 	return (arr);
