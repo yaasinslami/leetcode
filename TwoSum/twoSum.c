@@ -11,7 +11,7 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize)
 {
 	int	i;
 	int	j;
-	int T;
+	int	T;
 	int	*arr;
 
 	*returnSize = 2;
