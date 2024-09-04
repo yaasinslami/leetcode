@@ -20,7 +20,7 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize)
 			{
 				arr[0] = i;
 				arr[1] = j;
-				*returnSize = 2;
+                *returnSize = 2;
                 return (arr);
 			}
 			j++;
@@ -30,7 +30,7 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize)
     *returnSize = 0;
 	return (arr);
 }
-
+/*
 #include <stdio.h>
 
 int main()
@@ -50,3 +50,4 @@ int main()
   printf("\n");
   return (0);
 }
+*/
