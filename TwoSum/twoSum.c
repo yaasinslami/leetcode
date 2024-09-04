@@ -1,17 +1,9 @@
 #include <stdlib.h>
 
-int	check_sum(int n1, int n2, int target)
-{
-	if (n1 + n2 == target)
-		return (1);
-	return (0);
-}
-
 int* twoSum(int* nums, int numsSize, int target, int* returnSize)
 {
 	int	i;
 	int	j;
-	int	T;
 	int	*arr;
 
 	*returnSize = 2;
@@ -19,24 +11,23 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize)
 	if (!arr)
 		return (NULL);
 	i = 0;
-	T = 0;
-	while (i < numsSize)
+	while (i < numsSize - 1)
 	{
-		j = i;
+		j = i + 1;
 		while(j < numsSize)
 		{
-			if (check_sum(nums[i], nums[j], target) && i != j)
+			if (nums[i] + nums[j] == target)
 			{
 				arr[0] = i;
 				arr[1] = j;
-				T = 1;
+				*returnSize = 2;
+                return (arr);
 			}
 			j++;
 		}
-		if (T)
-			break;
 		i++;
 	}
+    *returnSize = 0;
 	return (arr);
 }
 
@@ -59,8 +50,3 @@ int main()
   printf("\n");
   return (0);
 }
-
-
-
-
-
