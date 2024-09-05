@@ -50,11 +50,11 @@ int	search(hashMap *map, int size, int key)
 int* twoSum(int* nums, int numsSize, int target, int* returnSize)
 {
 	hashMap	*map;
-	int		*arr;
-	int		mapSize;
-	int		compliment;
-	int		complimentIndex;
-	int		i;
+	int	*arr;
+	int	mapSize;
+	int	compliment;
+	int	complimentIndex;
+	int	i;
 
 	mapSize = numsSize * 2;
 	map = (hashMap *)malloc(sizeof(hashMap) * mapSize);
