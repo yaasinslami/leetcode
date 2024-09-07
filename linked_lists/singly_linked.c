@@ -62,6 +62,18 @@ void	print_list(node *head)
 	}
 }
 
+void	free_list(node *head)
+{
+	while (head != NULL)
+	{
+		node	*tmp;
+		tmp = head;
+		head = head->next;
+		free (tmp->name);
+		free(tmp);
+	}
+}
+
 int main()
 {
 	node	*head;
@@ -70,8 +82,9 @@ int main()
 	append_node(&head, "Yassine", 19);
 	append_node(&head, "Ahmed", 12);
 	append_node(&head, "Akram", 20);
-	append_node(&head, "Hassnae", 40);
+	append_node(&head, "oussama", 40);
 
 	print_list(head);
+	free_list(head);
 	return (0);
 }
