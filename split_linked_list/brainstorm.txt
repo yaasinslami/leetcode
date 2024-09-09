@@ -1,0 +1,32 @@
+
+-	crate a function that get the length of the linked list (length)
+
+-	allocate k rows for our 2D linked list.
+
+-	allocate for each sublist ?
+	-	calcul size = length / k
+	-	if (length % k == 0)
+			-	allocate for each sublist : size.
+		else --> length % k == extra != 0
+			-	the first (length % k) sublists :
+					-	allocate for each sublist : k node.
+			-	the remainder sublists (k - extra) :
+					-	allocate for each sublist :  size node.
+					-	The first extra parts will get one extra node (size + 1), and the rest will have size nodes.
+
+# Split the list
+-	For each part:
+		-	Assign the current head to the result[i].
+		-	Traverse current_size nodes to reach the end of this part.
+		-	now current (pointer) reached the adresse of the last node in the part.
+		-	break the list by setting current->next to NULL. so every sublist of our 2D linked List will be isolate.
+		-	Move the current pointer to the head of the next part (sublist).
+
+-	if length < k:
+		-	the first (extra) parts will have one node
+		-	and the remainder which is (k - (extra)) parts will be 	NULL
+		-	its becausue since the current pointer traverse to the (extra)'th node the next will be NULL
+		-	since the current->next = NULL the remainders parts will be automatically NULL
+		-	because of our assignement of result[i] = current and 0 <= i < k
+
+-	returning the result array => 2D linked List
