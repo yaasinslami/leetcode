@@ -8,7 +8,7 @@
 
 void	shift_function(int *bitmask, char vowel)
 {
-		switch (vowel)
+	switch (vowel)
 	{
 		case 'a': *bitmask ^= (1 << VOWEL_A); break;
 		case 'e': *bitmask ^= (1 << VOWEL_E); break;
