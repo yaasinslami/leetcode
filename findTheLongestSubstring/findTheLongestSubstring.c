@@ -65,7 +65,7 @@ int findTheLongestSubstring(char* s)
 
 int main()
 {
-	char	*str = "Hello ecma6, howo are you, a";
+	char	*str = "aaaabbboooo";
 
 	printf("%d\n", findTheLongestSubstring(str));
 	return (0);
